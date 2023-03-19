@@ -18,9 +18,9 @@
 
 <table>
     <tr>
-        <th>Screen 1</th>
-        <th>Screen 2</th>
-        <th>Screen 3</th>
+        <th>Objective Dialog box</th>
+        <th>Experiences Dialog box</th>
+        <th>Skills set Dialog box</th>
     </tr>
     <tr>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/4.jpg" alt="Output results"></td>
