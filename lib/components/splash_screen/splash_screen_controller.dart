@@ -50,7 +50,7 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
                         width: 25,
                         height: 25,
                         color: Colors.black,
-                        image: AssetImage('assets/images/resumeSplash.png'),
+                        image: AssetImage('assets/images/resumeAppLoader.png'),
                       ),
                       const SizedBox(
                         width: 8,
