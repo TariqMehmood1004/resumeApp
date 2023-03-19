@@ -1,4 +1,9 @@
 
+<style>
+    table tr, th, td {
+        border: none;
+    }
+</style>
 
 <h1>Output</h1>
 <table>
