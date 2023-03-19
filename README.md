@@ -32,9 +32,8 @@
 # Introduction to Resume App
 A great way to get a professional looking resume is with the help of Resume App. With this app you can create a professional looking CV for free. Once you have created it you will be able to save it as PDF file. You can also share the CV with other apps.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
+## Objective of Resume App
+A resume objective is an eye-catching statement of your career intent that's placed on top of your resume. The resume objective provides a 2-3 sentence snapshot of your professional experience, skills, and achievements, and explains why they make you the right candidate for the job.
 
 A few resources to get you started if this is your first Flutter project:
 
