@@ -29,8 +29,8 @@
     </tr>
 </table>
 
-# resume
-A new Flutter project.
+# Introduction to Resume App
+A great way to get a professional looking resume is with the help of Resume App. With this app you can create a professional looking CV for free. Once you have created it you will be able to save it as PDF file. You can also share the CV with other apps.
 
 ## Getting Started
 
