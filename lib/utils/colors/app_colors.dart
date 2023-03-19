@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class AppColorController {
   static Color backgroundLight = const Color(0xffffffff);
+  static Color white = const Color.fromARGB(255, 255, 255, 255);
+
+  static Color blueLight = const Color(0xff733aef);
+
   static Color backgroundLightGrey = const Color(0xfff2f3f4);
   static Color backgroundDark = const Color(0xFF000000);
   static Color backgroundDarkTransparented = const Color(0xB8000000);
@@ -11,6 +15,8 @@ class AppColorController {
   static Color cardBGColor = const Color(0xfffbfbfb);
   static Color transparent = const Color(0x00FBFBFB);
   static Color blueBlack = const Color(0xFF060D1D);
+  static Color blueBlackOff = const Color(0xDF09142D);
+  static Color blackTransparent = const Color.fromARGB(206, 0, 0, 0);
   static Color pink = const Color(0xFFDBD4FA);
 
   static Color colorBox1 = const Color(0xFF2A2738);

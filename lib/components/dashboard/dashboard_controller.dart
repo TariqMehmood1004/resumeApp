@@ -79,14 +79,15 @@ class _DashboardControllerState extends State<DashboardController> {
                             Text(
                               'Explore my Resume'.toUpperCase(),
                               style: TextStyle(
-                                color: AppColorController.backgroundLight,
+                                color: AppColorController.cardBGColor,
                                 fontSize: 12,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                             const SizedBox(width: 5),
                             Icon(
                               Icons.arrow_right,
-                              color: AppColorController.backgroundLight,
+                              color: AppColorController.white,
                             ),
                           ],
                         ),
