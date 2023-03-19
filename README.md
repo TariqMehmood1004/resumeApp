@@ -6,13 +6,11 @@
         <th>Screen 1</th>
         <th>Screen 2</th>
         <th>Screen 3</th>
-        <th>Screen 4</th>
     </tr>
     <tr>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/1.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/3.jpg" alt="Output results"></td>
-        <td></td>
     </tr>
 </table>
 
@@ -24,13 +22,11 @@
         <th>Screen 1</th>
         <th>Screen 2</th>
         <th>Screen 3</th>
-        <th>Screen 4</th>
     </tr>
     <tr>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/4.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/5.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/6.jpg" alt="Output results"></td>
-        <td></td>
     </tr>
 </table>
 
