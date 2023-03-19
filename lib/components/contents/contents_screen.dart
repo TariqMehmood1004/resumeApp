@@ -19,7 +19,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorController.backgroundDark,
+      backgroundColor: AppColorController.chocolateColor,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -27,7 +27,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
             Container(
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(10.0),
-              margin: const EdgeInsets.only(top: 50.0),
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 50),
               child: Text(
                 'Resume'.toUpperCase(),
                 style: TextStyle(
@@ -47,13 +47,27 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 const CardWidget(
-                    imagePath: 'assets/images/objective.png',
-                    fontSize: 12,
-                    title: 'Objective'),
+                  boxWidth: 175,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/objective.png',
+                  fontSize: 11,
+                  title: 'Objective',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
                 const CardWidget(
-                    imagePath: 'assets/images/exp.png',
-                    fontSize: 12,
-                    title: 'Experience'),
+                  boxWidth: 175,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/exp.png',
+                  fontSize: 11,
+                  title: 'Experience',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
               ],
             ),
             //card 3
@@ -62,17 +76,40 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const CardWidget(
-                    imagePath: 'assets/images/skills.png',
-                    fontSize: 12,
-                    title: 'Skils'),
-                const CardWidget(
-                    imagePath: 'assets/images/acheivements.png',
-                    fontSize: 12,
-                    title: 'Achievements'),
+                CardWidget(
+                  boxWidth: 355,
+                  boxHeight: 100,
+                  imagePath: 'assets/images/skills.png',
+                  fontSize: 11,
+                  title: 'Skils',
+                  topLeft: 20,
+                  topRight: 0,
+                  bottomLeft: 0,
+                  bottomRight: 20,
+                  backContainerColor: AppColorController.prettyBlue,
+                ),
               ],
             ),
             //
+            //card 3
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                const CardWidget(
+                  boxWidth: 355,
+                  boxHeight: 100,
+                  imagePath: 'assets/images/acheivements.png',
+                  fontSize: 11,
+                  title: 'Achievements',
+                  topLeft: 20,
+                  topRight: 0,
+                  bottomLeft: 0,
+                  bottomRight: 20,
+                ),
+              ],
+            ),
             //card 4
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -80,13 +117,27 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 const CardWidget(
-                    imagePath: 'assets/images/expertise.png',
-                    fontSize: 12,
-                    title: 'Expertise'),
+                  boxWidth: 175,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/expertise.png',
+                  fontSize: 11,
+                  title: 'Expertise',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
                 const CardWidget(
-                    imagePath: 'assets/images/qualification.png',
-                    fontSize: 12,
-                    title: 'Qualification'),
+                  boxWidth: 175,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/qualification.png',
+                  fontSize: 11,
+                  title: 'Qualification',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
               ],
             ),
 
@@ -98,13 +149,27 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 const CardWidget(
-                    imagePath: 'assets/images/hobbies.png',
-                    fontSize: 12,
-                    title: 'Hobbies'),
+                  boxWidth: 200,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/hobbies.png',
+                  fontSize: 11,
+                  title: 'Hobbies',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
                 const CardWidget(
-                    imagePath: 'assets/images/ref.png',
-                    fontSize: 12,
-                    title: 'References'),
+                  boxWidth: 150,
+                  boxHeight: 130,
+                  imagePath: 'assets/images/ref.png',
+                  fontSize: 11,
+                  title: 'References',
+                  topLeft: 10,
+                  topRight: 10,
+                  bottomLeft: 10,
+                  bottomRight: 10,
+                ),
               ],
             ),
           ],
@@ -116,24 +181,24 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
   Container resumeHeading(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width / 0.10,
-      padding: const EdgeInsets.all(10.0),
-      margin: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(12.0),
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-          color: AppColorController.blueBlack,
+          color: AppColorController.palleteColor1,
           borderRadius: BorderRadius.circular(8.0)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const CircleAvatar(
-            radius: 40,
-            backgroundImage: AssetImage('assets/images/tm.jpg'),
+            radius: 30,
+            backgroundImage: AssetImage('assets/images/p1.jpg'),
           ),
-          const SizedBox(width: 20),
+          const SizedBox(width: 10),
           Container(
             padding: const EdgeInsets.all(12.0),
             decoration: BoxDecoration(
-              color: AppColorController.blueLight,
+              color: AppColorController.reddish,
               borderRadius: BorderRadius.circular(30),
             ),
             child: Text(

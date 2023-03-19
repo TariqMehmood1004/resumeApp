@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resume/components/contents/contents_screen.dart';
 import 'package:resume/utils/colors/app_colors.dart';
 
@@ -15,7 +18,17 @@ class DashboardController extends StatefulWidget {
 class _DashboardControllerState extends State<DashboardController> {
   @override
   void initState() {
+    LicenseRegistry.addLicense(() async* {
+      final license = await rootBundle.loadString('google_fonts/OFL.txt');
+      yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+    });
     super.initState();
+    Timer(const Duration(days: 3), () {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const ContentScreenController()));
+    });
   }
 
   @override
@@ -32,11 +45,12 @@ class _DashboardControllerState extends State<DashboardController> {
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/tm.jpg'),
-                    fit: BoxFit.cover),
+                  image: AssetImage('assets/images/p2.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,7 +64,7 @@ class _DashboardControllerState extends State<DashboardController> {
                       ),
                       child: Text(
                         'I\'m Tariq Mehmood'.toUpperCase(),
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: AppColorController.backgroundLight,
                           fontWeight: FontWeight.w500,
                           fontSize: 25.0,
@@ -71,7 +85,7 @@ class _DashboardControllerState extends State<DashboardController> {
                         width: MediaQuery.of(context).size.width * 0.50,
                         padding: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
-                            color: AppColorController.blueBlack,
+                            color: AppColorController.highChocolateColor,
                             borderRadius: BorderRadius.circular(30.0)),
                         child: Row(
                           children: [

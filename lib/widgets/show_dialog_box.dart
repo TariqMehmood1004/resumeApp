@@ -9,7 +9,7 @@ Future<dynamic> ShowDialogBox(BuildContext context, String showTitle) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        backgroundColor: AppColorController.blueLight,
+        backgroundColor: AppColorController.reddish,
         title: Text(
           'Objective'.toUpperCase(),
           style: TextStyle(
