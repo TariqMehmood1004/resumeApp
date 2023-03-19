@@ -17,6 +17,7 @@ class AppColorController {
   static Color orange = const Color(0xffefb13e);
   static Color darkBlue = const Color(0xff0ebcee);
   static Color prettyBlue = const Color(0xff002c53);
+  static Color prettyOrange = const Color(0xffa9671f);
 
   static Color backgroundLightGrey = const Color(0xfff2f3f4);
   static Color black = const Color(0xff070508);

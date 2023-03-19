@@ -23,7 +23,7 @@ class _DashboardControllerState extends State<DashboardController> {
       yield LicenseEntryWithLineBreaks(['google_fonts'], license);
     });
     super.initState();
-    Timer(const Duration(days: 3), () {
+    Timer(const Duration(days: 1500), () {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -56,8 +56,8 @@ class _DashboardControllerState extends State<DashboardController> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 380, right: 80),
-                      padding: const EdgeInsets.all(12.0),
+                      margin: const EdgeInsets.only(top: 350, right: 90),
+                      padding: const EdgeInsets.symmetric(vertical: 150),
                       decoration: BoxDecoration(
                         color: AppColorController.transparent,
                         borderRadius: BorderRadius.circular(12.0),
@@ -85,7 +85,7 @@ class _DashboardControllerState extends State<DashboardController> {
                         width: MediaQuery.of(context).size.width * 0.50,
                         padding: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
-                            color: AppColorController.highChocolateColor,
+                            color: AppColorController.palleteColor1,
                             borderRadius: BorderRadius.circular(30.0)),
                         child: Row(
                           children: [

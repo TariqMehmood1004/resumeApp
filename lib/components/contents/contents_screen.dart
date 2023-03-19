@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resume/widgets/card_widget.dart';
 import 'package:resume/utils/colors/app_colors.dart';
+import 'package:resume/widgets/show_dialog_box.dart';
 
 class ContentScreenController extends StatefulWidget {
   const ContentScreenController({super.key});
@@ -46,8 +47,8 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const CardWidget(
-                  boxWidth: 175,
+                CardWidget(
+                  boxWidth: 150,
                   boxHeight: 130,
                   imagePath: 'assets/images/objective.png',
                   fontSize: 11,
@@ -56,9 +57,13 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(
+                        context, 'Objective', TabSkills.description[0]);
+                  },
                 ),
-                const CardWidget(
-                  boxWidth: 175,
+                CardWidget(
+                  boxWidth: 200,
                   boxHeight: 130,
                   imagePath: 'assets/images/exp.png',
                   fontSize: 11,
@@ -67,6 +72,13 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(
+                      context,
+                      'Experiences',
+                      "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python",
+                    );
+                  },
                 ),
               ],
             ),
@@ -86,7 +98,10 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 0,
                   bottomLeft: 0,
                   bottomRight: 20,
-                  backContainerColor: AppColorController.prettyBlue,
+                  controller: () {
+                    ShowDialogBox(context, 'Skills Set',
+                        "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python");
+                  },
                 ),
               ],
             ),
@@ -97,16 +112,19 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const CardWidget(
+                CardWidget(
                   boxWidth: 355,
                   boxHeight: 100,
                   imagePath: 'assets/images/acheivements.png',
                   fontSize: 11,
                   title: 'Achievements',
-                  topLeft: 20,
-                  topRight: 0,
-                  bottomLeft: 0,
-                  bottomRight: 20,
+                  topLeft: 0,
+                  topRight: 20,
+                  bottomLeft: 20,
+                  bottomRight: 0,
+                  controller: () {
+                    ShowDialogBox(context, 'Hi', 'descriptions');
+                  },
                 ),
               ],
             ),
@@ -116,7 +134,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const CardWidget(
+                CardWidget(
                   boxWidth: 175,
                   boxHeight: 130,
                   imagePath: 'assets/images/expertise.png',
@@ -126,8 +144,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(context, 'Hi', 'descriptions');
+                  },
                 ),
-                const CardWidget(
+                CardWidget(
                   boxWidth: 175,
                   boxHeight: 130,
                   imagePath: 'assets/images/qualification.png',
@@ -137,6 +158,9 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(context, 'Hi', 'descriptions');
+                  },
                 ),
               ],
             ),
@@ -148,7 +172,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const CardWidget(
+                CardWidget(
                   boxWidth: 200,
                   boxHeight: 130,
                   imagePath: 'assets/images/hobbies.png',
@@ -158,8 +182,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(context, 'Hi', 'descriptions');
+                  },
                 ),
-                const CardWidget(
+                CardWidget(
                   boxWidth: 150,
                   boxHeight: 130,
                   imagePath: 'assets/images/ref.png',
@@ -169,6 +196,9 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   topRight: 10,
                   bottomLeft: 10,
                   bottomRight: 10,
+                  controller: () {
+                    ShowDialogBox(context, 'Hi', 'descriptions');
+                  },
                 ),
               ],
             ),

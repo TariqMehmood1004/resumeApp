@@ -29,11 +29,11 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorController.backgroundDark,
+      backgroundColor: AppColorController.palleteColor1,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: AppColorController.backgroundLight,
+        color: AppColorController.palleteColor1,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -46,11 +46,12 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Image(
-                        width: 25,
-                        height: 25,
-                        color: Colors.black,
-                        image: AssetImage('assets/images/resumeAppLoader.png'),
+                      Image(
+                        width: 35,
+                        height: 35,
+                        color: AppColorController.palleteColor,
+                        image: const AssetImage(
+                            'assets/images/resumeAppLoader.png'),
                       ),
                       const SizedBox(
                         width: 8,
@@ -58,7 +59,7 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
                       Text(
                         'Resume app'.toUpperCase(),
                         style: TextStyle(
-                          color: AppColorController.backgroundDark,
+                          color: AppColorController.palleteColor,
                           fontSize: 10.0,
                           fontWeight: FontWeight.w500,
                         ),
@@ -73,12 +74,12 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
                   mainAxisAlignment: MainAxisAlignment.end, //y-axis
                   crossAxisAlignment: CrossAxisAlignment.center, //x-axis
                   children: [
-                    const SizedBox(
-                      width: 22,
-                      height: 22,
+                    SizedBox(
+                      width: 20,
+                      height: 20,
                       child: CircularProgressIndicator(
-                        color: Colors.black,
-                        strokeWidth: 2,
+                        color: AppColorController.goldGrain,
+                        strokeWidth: 1,
                       ),
                     ),
                     const SizedBox(
@@ -87,14 +88,15 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
                     Text(
                       'From',
                       style: TextStyle(
-                          color: AppColorController.backgroundDark,
-                          fontSize: 8.0),
+                          color: AppColorController.white, fontSize: 8.0),
+                    ),
+                    const SizedBox(
+                      height: 5,
                     ),
                     Text(
                       'Notio Software Solutions',
                       style: TextStyle(
-                          color: AppColorController.backgroundDark,
-                          fontSize: 8.0),
+                          color: AppColorController.white, fontSize: 8.0),
                     ),
                   ],
                 ),

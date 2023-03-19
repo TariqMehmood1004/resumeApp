@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:resume/widgets/show_dialog_box.dart';
 import 'package:resume/utils/colors/app_colors.dart';
+
+class TabSkills {
+  static var skills = [
+    "C#",
+    "C/C++",
+    "Flutter Development",
+    "Java",
+    "Dart Programming",
+    "Computer Teacher",
+    "Xamarin",
+    "ASP.NET",
+    "Database Developer",
+    "Web Development",
+    "Mobile Development",
+    "Python",
+  ];
+  static var description = [
+    "I have had some bad experiences in the past. Only the person experiencing the pain can know how bad that pain is,' she said. The foundation also carries out research on the economic experiences of people who earn low wages. You know how it made you feel after one experience.",
+  ];
+}
 
 class CardWidget extends StatelessWidget {
   const CardWidget({
@@ -15,6 +34,8 @@ class CardWidget extends StatelessWidget {
     this.bottomLeft = 0,
     this.bottomRight = 0,
     this.backContainerColor = const Color(0xFF260615),
+    this.isClicked = true,
+    required this.controller,
   });
 
   final String imagePath;
@@ -27,22 +48,25 @@ class CardWidget extends StatelessWidget {
   final double bottomLeft;
   final double bottomRight;
   final Color backContainerColor;
+  final bool isClicked;
+  final VoidCallback? controller;
 
   @override
   Widget build(BuildContext context) {
-    var lists = [
-      "I have had some bad experiences in the past. Only the person experiencing the pain can know how bad that pain is,' she said. The foundation also carries out research on the economic experiences of people who earn low wages. You know how it made you feel after one experience.",
-    ];
     return InkWell(
-      onTap: () {},
+      onTap: controller,
+      hoverColor: Colors.transparent,
+      focusColor: Colors.transparent,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
       child: Container(
         width: boxWidth,
         height: boxHeight,
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         margin: const EdgeInsets.all(3.5),
         decoration: BoxDecoration(
-          color: backContainerColor,
+          color: isClicked ? backContainerColor : AppColorController.blueLight,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(topLeft),
             topRight: Radius.circular(topRight),
@@ -51,9 +75,7 @@ class CardWidget extends StatelessWidget {
           ),
         ),
         child: InkWell(
-          onTap: () {
-            ShowDialogBox(context, lists[0]);
-          },
+          onTap: controller,
           highlightColor: AppColorController.blackTransparent,
           focusColor: AppColorController.blackTransparent,
           child: Column(
@@ -61,6 +83,9 @@ class CardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
+                radius: 15,
+                // foregroundColor: AppColorController.prettyBlue,
+                backgroundColor: AppColorController.palleteColor1,
                 backgroundImage: AssetImage(imagePath),
               ),
               Align(
