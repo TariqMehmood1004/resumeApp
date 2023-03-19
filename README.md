@@ -1,6 +1,7 @@
 
-<table>
+
 <h1>Output</h1>
+<table>
     <tr>
         <th>Screen 1</th>
         <th>Screen 2</th>
@@ -12,7 +13,6 @@
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/3.jpg" alt="Output results"></td>
         <td></td>
-        
     </tr>
 </table>
 
