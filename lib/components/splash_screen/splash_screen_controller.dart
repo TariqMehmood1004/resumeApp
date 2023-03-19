@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:resume/components/dashboard/dashboard_controller.dart';
-import 'package:resume/utils/colors/appColors.dart';
+import 'package:resume/utils/colors/app_colors.dart';
 
 class SplashScreenController extends StatefulWidget {
   const SplashScreenController({super.key});
@@ -20,7 +20,7 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
       statusBarColor: AppColorController.transparent,
     ));
 
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const DashboardController()));
     });
