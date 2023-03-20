@@ -99,8 +99,8 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 0,
                   bottomRight: 20,
                   controller: () {
-                    ShowDialogBox(context, 'Skills Set',
-                        "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python");
+                    showDialogBoxTabs(context, "Skills Setting");
+                    // "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python"
                   },
                 ),
               ],
@@ -123,7 +123,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 20,
                   bottomRight: 0,
                   controller: () {
-                    ShowDialogBox(context, 'Hi', 'descriptions');
+                    showDialogBoxTabs(context, 'Achievements');
                   },
                 ),
               ],
@@ -145,7 +145,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    ShowDialogBox(context, 'Hi', 'descriptions');
+                    showDialogBoxTabs(context, 'Expertise');
                   },
                 ),
                 CardWidget(

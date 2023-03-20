@@ -16,6 +16,7 @@ class TabSkills {
     "Mobile Development",
     "Python",
   ];
+
   static var description = [
     "I have had some bad experiences in the past. Only the person experiencing the pain can know how bad that pain is,' she said. The foundation also carries out research on the economic experiences of people who earn low wages. You know how it made you feel after one experience.",
   ];
