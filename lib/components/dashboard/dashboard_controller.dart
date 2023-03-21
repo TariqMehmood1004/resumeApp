@@ -23,7 +23,7 @@ class _DashboardControllerState extends State<DashboardController> {
       yield LicenseEntryWithLineBreaks(['google_fonts'], license);
     });
     super.initState();
-    Timer(const Duration(days: 1500), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(

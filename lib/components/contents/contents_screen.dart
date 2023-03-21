@@ -12,6 +12,47 @@ class ContentScreenController extends StatefulWidget {
 }
 
 class _ContentScreenControllerState extends State<ContentScreenController> {
+  var skillExpert = [
+    'C/C++',
+    'C+',
+    'Java',
+    'Dart',
+    'Flutter',
+    'Python',
+    'Assembly Language',
+    'Php',
+    'ASP.NET',
+    'Xamarin',
+    'Data Scientist',
+    'Database  Developer',
+    'Perl Language',
+  ];
+
+  var experiences = [
+    '2 years experience of computer teaching',
+    '9 years of coding experience',
+    '6 months experience of data science'
+  ];
+  var hobbies = ['programming', 'cricket', 'football', 'tennis table'];
+
+  var achievementList = ['Flutter Expert', 'C# Expert', 'C++ Expert'];
+
+  var qualifications = [
+    'BSSE 7th semester continue (3.08 CGPA)',
+    'ICS BISE Multan',
+    'Matric with Computer Science'
+  ];
+
+  var expertiseList = [
+    'Flutter',
+    'C#',
+    'C++',
+    'Data Science',
+    'Python',
+    'Web Application',
+    'Computer Teaching'
+  ];
+
   var contentsList = {
     "Objective":
         "I have had some bad experiences in the past. Only the person experiencing the pain can know how bad that pain is,' she said. The foundation also carries out research on the economic experiences of people who earn low wages. You know how it made you feel after one experience.",
@@ -73,10 +114,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    ShowDialogBox(
+                    showDialogBoxWithWrapWidget(
                       context,
                       'Experiences',
-                      "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python",
+                      dynamicChips(
+                          experiences, AppColorController.prettyOrange),
                     );
                   },
                 ),
@@ -99,8 +141,8 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 0,
                   bottomRight: 20,
                   controller: () {
-                    showDialogBoxTabs(context, "Skills Setting");
-                    // "C# , C/C++, Flutter Development, Java, Dart Programming, Computer Teacher, Xamarin, ASP.NET, Database  Developer , Web Development, Mobile Development, Python"
+                    showDialogBoxWithWrapWidget(
+                        context, 'Skills Setting', wrapWidget());
                   },
                 ),
               ],
@@ -123,7 +165,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 20,
                   bottomRight: 0,
                   controller: () {
-                    showDialogBoxTabs(context, 'Achievements');
+                    showDialogBoxWithWrapWidget(
+                        context,
+                        'Achievements',
+                        dynamicChips(
+                            achievementList, AppColorController.prettyOrange));
                   },
                 ),
               ],
@@ -145,7 +191,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    showDialogBoxTabs(context, 'Expertise');
+                    showDialogBoxWithWrapWidget(
+                        context,
+                        'Expertise',
+                        dynamicChips(
+                            expertiseList, AppColorController.prettyOrange));
                   },
                 ),
                 CardWidget(
@@ -159,7 +209,12 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    ShowDialogBox(context, 'Hi', 'descriptions');
+                    showDialogBoxWithWrapWidget(
+                      context,
+                      'Qualification',
+                      dynamicChips(
+                          qualifications, AppColorController.prettyOrange),
+                    );
                   },
                 ),
               ],
@@ -183,7 +238,11 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    ShowDialogBox(context, 'Hi', 'descriptions');
+                    showDialogBoxWithWrapWidget(
+                      context,
+                      'Qualification',
+                      dynamicChips(hobbies, AppColorController.prettyOrange),
+                    );
                   },
                 ),
                 CardWidget(
@@ -197,7 +256,8 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   bottomLeft: 10,
                   bottomRight: 10,
                   controller: () {
-                    ShowDialogBox(context, 'Hi', 'descriptions');
+                    ShowDialogBox(context, 'References',
+                        'References will be furnished on demand.');
                   },
                 ),
               ],
@@ -246,31 +306,87 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
     );
   }
 
-//
-//
+  //
   wrapWidget() {
-    return Wrap(children: [
-      chipForRow('C#', AppColorController.blueLight),
-      chipForRow('C/C++', AppColorController.blueLight),
-      chipForRow('Flutter', AppColorController.blueLight),
-      chipForRow('Java', AppColorController.blueLight),
-      chipForRow('Python', AppColorController.blueLight),
-      chipForRow('PHP', AppColorController.blueLight),
-    ]);
+    return dynamicChips(skillExpert, AppColorController.prettyOrange);
   }
 
   //
+  dynamicChips(List<String> list, Color bgColor) {
+    return Wrap(
+      spacing: 10.0,
+      runSpacing: 0,
+      children: List<Widget>.generate(
+        list.length,
+        (index) => Chip(
+          onDeleted: () {},
+          deleteIcon: const Icon(
+            Icons.check,
+            size: 10,
+          ),
+          avatar: CircleAvatar(
+            backgroundColor: AppColorController.prettyOrange,
+            child: Text(
+              list[index][0],
+              style: const TextStyle(fontSize: 10.0),
+            ),
+          ),
+          labelPadding: const EdgeInsets.all(0),
+          elevation: 0,
+          backgroundColor: bgColor,
+          shadowColor: AppColorController.transparent,
+          padding: const EdgeInsets.only(right: 0.0),
+          label: Text(
+            list[index],
+            style: TextStyle(color: AppColorController.black, fontSize: 11.0),
+          ),
+        ),
+      ),
+    );
+  }
+
   // create widgets
   Widget chipForRow(String skillLabel, Color bgColor) {
     return Container(
-      margin: const EdgeInsets.all(6.0),
+      decoration: BoxDecoration(
+        color: AppColorController.transparent,
+      ),
+      margin: const EdgeInsets.all(0.5),
       child: Chip(
-        labelPadding: const EdgeInsets.all(5.0),
-        elevation: 6.0,
+        labelPadding: const EdgeInsets.all(0.5),
+        elevation: 0,
         backgroundColor: bgColor,
-        shadowColor: AppColorController.backgroundDark,
-        padding: const EdgeInsets.all(6.0),
-        label: Text(skillLabel),
+        shadowColor: AppColorController.transparent,
+        padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 7.0),
+        label: Text(
+          skillLabel,
+          style: TextStyle(color: AppColorController.offWhite, fontSize: 11.0),
+        ),
+      ),
+    );
+  }
+
+  // chip widget for lists
+  Widget chipForList(List<String> skillLabel, Color bgColor) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColorController.transparent,
+      ),
+      margin: const EdgeInsets.all(0.5),
+      child: ListView.builder(
+        itemCount: skillExpert.length,
+        itemBuilder: (context, int index) {
+          return Chip(
+            labelPadding: const EdgeInsets.all(0.5),
+            elevation: 0,
+            backgroundColor: bgColor,
+            shadowColor: AppColorController.transparent,
+            padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 7.0),
+            label: Text(
+              skillExpert[index],
+            ),
+          );
+        },
       ),
     );
   }

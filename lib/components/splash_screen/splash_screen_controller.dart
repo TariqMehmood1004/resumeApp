@@ -20,7 +20,7 @@ class _SplashScreenControllerState extends State<SplashScreenController> {
       statusBarColor: AppColorController.transparent,
     ));
 
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const DashboardController()));
     });

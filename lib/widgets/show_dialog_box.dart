@@ -33,6 +33,29 @@ Future<dynamic> ShowDialogBox(
   );
 }
 
+Future<dynamic> showDialogBoxWithWrapWidget(
+    BuildContext context, String showTitle, Widget widget) {
+  return showDialog(
+    barrierColor: AppColorController.blackTransparent,
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        backgroundColor: AppColorController.chocolateColor,
+        title: Text(
+          showTitle.toUpperCase(),
+          style: TextStyle(
+            color: AppColorController.white,
+            letterSpacing: 2,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        content: widget,
+      );
+    },
+  );
+}
+
 Future<dynamic> showDialogBoxTabs(BuildContext context, String showTitle) {
   return showDialog(
     barrierColor: AppColorController.blackTransparent,
