@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:resume/widgets/card_widget.dart';
 import 'package:resume/utils/colors/app_colors.dart';
 import 'package:resume/widgets/show_dialog_box.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ContentScreenController extends StatefulWidget {
   const ContentScreenController({super.key});
