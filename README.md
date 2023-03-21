@@ -26,6 +26,19 @@
     </tr>
 </table>
 
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/4.1.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/5.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/5.1.jpg" alt="Output results"></td>
+    </tr>
+</table>
+
 
 ## Dialog Box Documentation and outputs
 
