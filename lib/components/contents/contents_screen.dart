@@ -245,4 +245,33 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
       ),
     );
   }
+
+//
+//
+  wrapWidget() {
+    return Wrap(children: [
+      chipForRow('C#', AppColorController.blueLight),
+      chipForRow('C/C++', AppColorController.blueLight),
+      chipForRow('Flutter', AppColorController.blueLight),
+      chipForRow('Java', AppColorController.blueLight),
+      chipForRow('Python', AppColorController.blueLight),
+      chipForRow('PHP', AppColorController.blueLight),
+    ]);
+  }
+
+  //
+  // create widgets
+  Widget chipForRow(String skillLabel, Color bgColor) {
+    return Container(
+      margin: const EdgeInsets.all(6.0),
+      child: Chip(
+        labelPadding: const EdgeInsets.all(5.0),
+        elevation: 6.0,
+        backgroundColor: bgColor,
+        shadowColor: AppColorController.backgroundDark,
+        padding: const EdgeInsets.all(6.0),
+        label: Text(skillLabel),
+      ),
+    );
+  }
 }
