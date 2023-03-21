@@ -2,14 +2,27 @@
 <h1>Output</h1>
 <table>
     <tr>
-        <th>Splash Screen</th>
-        <th>Dashboard Screen</th>
-        <th>Contents Screen</th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     <tr>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/1.jpg" alt="Output results"></td>
-        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.1.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/3.jpg" alt="Output results"></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/3.1.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/4.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/4.1.jpg" alt="Output results"></td>
     </tr>
 </table>
 
