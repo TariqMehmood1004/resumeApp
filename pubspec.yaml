@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
   introduction_screen: ^3.1.7
+  font_awesome: ^5.10.1
+  font_awesome_flutter: ^10.4.0
 
 dev_dependencies:
   flutter_test:

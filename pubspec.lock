@@ -168,6 +168,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome:
+    dependency: "direct main"
+    description:
+      name: font_awesome
+      sha256: faf68c799262f47e4ca5f59f0d1881a1934e62d11ca77d94af15027966f78dca
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.10.1"
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: font_awesome_flutter
+      sha256: "959ef4add147753f990b4a7c6cccb746d5792dbdc81b1cde99e62e7edb31b206"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.4.0"
   google_fonts:
     dependency: "direct main"
     description:

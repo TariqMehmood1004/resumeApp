@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:resume/widgets/card_widget.dart';
 import 'package:resume/utils/colors/app_colors.dart';
 import 'package:resume/widgets/show_dialog_box.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ContentScreenController extends StatefulWidget {
   const ContentScreenController({super.key});
@@ -276,29 +277,144 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
       decoration: BoxDecoration(
           color: AppColorController.palleteColor1,
           borderRadius: BorderRadius.circular(8.0)),
+      child: InkWell(
+        onTap: () {
+          showModalBottomSheet(
+            isScrollControlled: false,
+            backgroundColor: AppColorController.blueBlack,
+            barrierColor: AppColorController.backgroundDarkTransparented,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(12.0)),
+            ),
+            context: context,
+            builder: (context) => Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  const SizedBox(height: 12.0),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    color: AppColorController.transparent,
+                    child: Wrap(
+                      children: [
+                        Text(
+                          'My Profile'.toUpperCase(),
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 1.0,
+                            color: AppColorController.yellowOff,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15.0,
+                  ),
+                  Divider(
+                    color: AppColorController.colorBox2,
+                    thickness: 0.1,
+                  ),
+                  const SizedBox(
+                    height: 3.0,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0, vertical: 18.0),
+                    margin: const EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      color: AppColorController.darkBlue.withOpacity(0.03),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage('assets/images/tm.png'),
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          'Tariq Mehmood'.toUpperCase(),
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 2,
+                            color: AppColorController.offWhite,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 5.0),
+                  profileWithIconAndTitle(
+                      'johnbrrighte7427206@gmail.com', Icons.mail),
+                  profileWithIconAndTitle(
+                      'johnbrrighte7427206@gmail.com', Icons.ac_unit),
+                  profileWithIconAndTitle('03077427086', Icons.phone),
+                  profileWithIconAndTitle(
+                      'Southern Bypass Multan', Icons.location_city),
+                ],
+              ),
+            ),
+          );
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/images/tm.png'),
+            ),
+            const SizedBox(width: 10),
+            Container(
+              padding: const EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColorController.reddish,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Text(
+                'Tariq Mehmood'.toUpperCase(),
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
+                  color: AppColorController.cardBGColor,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container profileWithIconAndTitle(String title, IconData icon) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+      margin: const EdgeInsets.all(5.0),
+      decoration: BoxDecoration(
+        color: AppColorController.darkBlue.withOpacity(0.02),
+        borderRadius: BorderRadius.circular(5),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage('assets/images/p1.jpg'),
+          Icon(
+            icon,
+            color: AppColorController.yellowOff,
           ),
-          const SizedBox(width: 10),
-          Container(
-            padding: const EdgeInsets.all(12.0),
-            decoration: BoxDecoration(
-              color: AppColorController.reddish,
-              borderRadius: BorderRadius.circular(30),
-            ),
-            child: Text(
-              'Tariq Mehmood'.toUpperCase(),
-              style: TextStyle(
-                fontSize: 12.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-                color: AppColorController.cardBGColor,
-              ),
+          const SizedBox(
+            width: 10,
+          ),
+          Text(
+            title,
+            style: TextStyle(
+              color: AppColorController.offWhite,
+              fontSize: 12,
             ),
           ),
         ],
