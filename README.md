@@ -8,8 +8,8 @@
     </tr>
     <tr>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/1.jpg" alt="Output results"></td>
+        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.jpg" alt="Output results"></td>
         <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/2.1.jpg" alt="Output results"></td>
-        <td><img src= "https://github.com/TariqMehmood1004/resumeApp/blob/main/output/3.jpg" alt="Output results"></td>
     </tr>
 </table>
 
