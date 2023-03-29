@@ -52,21 +52,17 @@
     </tr>
 </table>
 
-
-# Introduction to Resume App
+# NOTIO Software Solutions - Resume App
+## Introduction to Resume App
 A great way to get a professional looking resume is with the help of Resume App. With this app you can create a professional looking CV for free. Once you have created it you will be able to save it as PDF file. You can also share the CV with other apps.
 
 ## Objective of Resume App
 A resume objective is an eye-catching statement of your career intent that's placed on top of your resume. The resume objective provides a 2-3 sentence snapshot of your professional experience, skills, and achievements, and explains why they make you the right candidate for the job.
 
-</hr>
-
-# CONTENT SCREEN CONTROLLER
-## Contents screen controller widget
+## Content screen controller
 The code appears to be written in the Dart programming language and uses the Flutter framework. It defines a stateless widget that returns a Scaffold widget, which is the basic material design visual layout structure. The Scaffold widget consists of multiple child widgets like the SingleChildScrollView, Column, and multiple instances of the CardWidget.
 
 From a functional perspective, the code seems to be creating a UI for a resume application. The UI contains the following elements:
-
 - A container widget with the "Resume" text.
 - A row with two CardWidgets for displaying the Objective and Experience sections.
 - A row with one CardWidget for displaying the Skills section.
@@ -101,9 +97,8 @@ Finally, a Timer is created to delay the execution of a task by the specified du
 ## SplashScreenController Widget
 This is a widget that displays a loading screen while the app is initializing. The loading screen has a logo and a text indicating the app name, as well as a spinning progress indicator. The logo and text are centered vertically and horizontally, and the progress indicator is displayed at the bottom. The background color is set to a palette color and the text color is white. The widget is implemented as a stateless widget with a Scaffold as the root widget, containing a Container with a specified width and height. Inside the Container, there is a Center widget with two children, a Column and a SizedBox. The Column contains the logo and text, and the SizedBox contains the progress indicator and additional text. Overall, this widget provides a visually appealing way to indicate to the user that the app is loading.
 
-</hr>
 
-# Dashboard Controller Widget
+## Dashboard Controller Widget
 This is a StatelessWidget that returns a Scaffold with a SingleChildScrollView as its body. The SingleChildScrollView contains a Container that has a background image set using a BoxDecoration. The background image is blurred using a BackdropFilter.
 
 Inside the Container, there are two Containers wrapped inside a Column. The first Container has some margin and padding set, and it displays the text "I'm Tariq Mehmood" using the GoogleFonts poppins font family.
@@ -111,8 +106,6 @@ Inside the Container, there are two Containers wrapped inside a Column. The firs
 The second Container is wrapped inside an InkWell and has a Row containing text and an icon. When the InkWell is tapped, it navigates to a new screen using a MaterialPageRoute.
 
 Overall, this widget creates a landing page with a background image, a blurred text overlay, and a button to navigate to another screen.
-
-</hr>
 
 ## dynamicChips widget
 This function generates a list of dynamic chips based on a given list of strings and a background color. Each chip consists of an avatar, a label, and a delete icon. The avatar is a circle with a single letter inside, taken from the first character of the corresponding string in the list. The label is the entire string. The delete icon is a checkmark icon.
