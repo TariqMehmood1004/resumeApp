@@ -135,7 +135,7 @@ class _ContentScreenControllerState extends State<ContentScreenController> {
                   boxHeight: 100,
                   imagePath: 'assets/images/skills.png',
                   fontSize: 11,
-                  title: 'Skils',
+                  title: 'Skills',
                   topLeft: 20,
                   topRight: 0,
                   bottomLeft: 0,
