@@ -52,7 +52,11 @@
     </tr>
 </table>
 
-# NOTIO Software Solutions - Resume App
+# Documentation and functional requirements
+
+
+
+## NOTIO Software Solutions - Resume App
 Flutter is a mobile app development framework that allows you to create high-performance, cross-platform mobile applications for both Android and iOS platforms. With Flutter, you can create an app that runs on both platforms using a single codebase, which can significantly reduce development time and costs.
 
 A resume app in Flutter would be an application that allows users to create and display their resume in an attractive and user-friendly way. This could include features such as templates, customization options, and the ability to add and update information. A resume app in Flutter can be a great tool for job seekers looking to stand out in the crowded job market.
